@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaxWise</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+    .navbar {
+      background-color: #2c3e50;
+    }
+    .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .nav-link {
+      color: white !important;
+    }
+    .hero-section {
+      background-color: #3498db;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+    .feature-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .feature-icon {
+      font-size: 2rem;
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+    .feature-card h3 {
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    .feature-card p {
+      color: #34495e;
+    }
+    .footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    .form-control {
+      border-radius: 5px;
+    }
+    .form-group label {
+      font-weight: 500;
+      color: #34495e;
+    }
+    .result-section {
+      background-color: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+    .result-section h5 {
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    .result-section p {
+      color: #34495e;
+    }
+    .section-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .upload-section {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .upload-section h3 {
+      color: #2c3e50;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .upload-section p {
+      color: #34495e;
+      margin-bottom: 20px;
+    }
+    .upload-section .btn {
+      width: 100%;
+    }
+    .simulator-section {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .simulator-section h3 {
+      color: #2c3e50;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .simulator-section p {
+      color: #34495e;
+      margin-bottom: 20px;
+    }
+    .simulator-section .btn {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">TaxWise</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#upload">Upload Form 16</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section class="hero-section">
+    <div class="container">
+      <h1>Welcome to the Tax Optimization Platform</h1>
+      <p>Your one-stop solution for tax planning, compliance, and optimization.</p>
+      <a href="#features" class="btn btn-light btn-lg">Explore Features</a>
+    </div>
+  </section>
+  <section id="features" class="container mt-5">
+    <h2 class="text-center mb-4">Features</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Tax Scenario Simulator</h3>
+          <p>Simulate future tax liabilities based on your income, expenses, and investments.</p>
+          <a href="#scenarioSimulator" class="btn btn-primary">Try It</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h3>Tax Compliance Alerts</h3>
+          <p>Get alerts for upcoming tax deadlines and regulatory changes.</p>
+          <a href="#taxAlerts" class="btn btn-primary">View Alerts</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-coins"></i>
+          </div>
+          <h3>Tax-Optimized Portfolio</h3>
+          <p>Get personalized investment suggestions for maximum tax savings.</p>
+          <a href="#investmentPortfolio" class="btn btn-primary">Get Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="upload" class="container mt-5">
+    <h2 class="section-heading">Upload Form 16</h2>
+    <div class="upload-section">
+      <h3>📄 Upload Your Form 16</h3>
+      <p>Upload your Form 16 (PDF) to get started with tax optimization.</p>
+      <form id="uploadForm">
+        <div class="form-group">
+          <label for="form16File">Choose File</label>
+          <input type="file" class="form-control-file" id="form16File" accept=".pdf">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+      <div id="uploadResult" class="mt-3 result-section"></div>
+    </div>
+  </section>
+  <section id="scenarioSimulator" class="container mt-5">
+    <h2 class="section-heading">Tax Scenario Simulator</h2>
+    <div class="simulator-section">
+      <h3>📊 Simulate Your Tax Scenario</h3>
+      <p>Enter your financial details to simulate future tax liabilities.</p>
+      <form id="scenarioForm">
+        <div class="form-group">
+          <label for="income">Annual Income (₹)</label>
+          <input type="number" class="form-control" id="income" required>
+        </div>
+        <div class="form-group">
+          <label for="expenses">Annual Expenses (₹)</label>
+          <input type="number" class="form-control" id="expenses" required>
+        </div>
+        <div class="form-group">
+          <label for="investments">Annual Investments (₹)</label>
+          <input type="number" class="form-control" id="investments" required>
+        </div>
+        <div class="form-group">
+          <label for="years">Number of Years</label>
+          <input type="number" class="form-control" id="years" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Simulate</button>
+      </form>
+      <div id="scenarioChart" class="mt-4 result-section"></div>
+    </div>
+  </section>
+  <section id="taxAlerts" class="container mt-5">
+    <h2 class="section-heading">Tax Compliance Alerts</h2>
+    <div class="simulator-section">
+      <h3>⏰ Stay Compliant with Tax Deadlines</h3>
+      <p>Get real-time alerts for upcoming tax deadlines and regulatory changes.</p>
+      <button id="fetchAlerts" class="btn btn-primary">Fetch Alerts</button>
+      <div id="alertsResult" class="mt-3 result-section"></div>
+    </div>
+
+    <section id="carbonSavings" class="container mt-5">
+      <h2 class="section-heading">Carbon Footprint Tax Savings</h2>
+      <div class="simulator-section">
+          <h3>🌱 Eco-Friendly Tax Savings</h3>
+          <p>Calculate tax savings from eco-friendly investments and practices.</p>
+          <form id="ecoTaxForm">
+              <div class="form-group">
+                  <label for="ecoIncome">Annual Income (₹)</label>
+                  <input type="number" class="form-control" id="ecoIncome" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Calculate Savings</button>
+          </form>
+          <div id="ecoTaxResult" class="mt-3 result-section"></div>
+      </div>
+  </section>
+
+  </section>
+    <section id="advisors" class="container mt-5">
+      <h2 class="text-center mb-4">Contact Financial Advisors</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="advisor-card">
+            <h4>John Doe</h4>
+            <p><strong>Specialization:</strong> Tax Planning</p>
+            <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4.8)</p>
+            <button class="btn btn-primary" onclick="bookAdvisor(1)">Book Consultation</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="advisor-card">
+            <h4>Jane Smith</h4>
+            <p><strong>Specialization:</strong> Investment Strategies</p>
+            <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4.7)</p>
+            <button class="btn btn-primary" onclick="bookAdvisor(2)">Book Consultation</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="advisor-card">
+            <h4>Alice Johnson</h4>
+            <p><strong>Specialization:</strong> Retirement Planning</p>
+            <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4.6)</p>
+            <button class="btn btn-primary" onclick="bookAdvisor(3)">Book Consultation</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 TaxWise Platform. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const file = document.getElementById('form16File').files[0];
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('/upload', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+      document.getElementById('uploadResult').innerHTML = `
+        <a href="${result.download_link}" class="btn btn-success">Download Excel</a>
+      `;
+    });
+    document.getElementById('scenarioForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const income = document.getElementById('income').value;
+      const expenses = document.getElementById('expenses').value;
+      const investments = document.getElementById('investments').value;
+      const years = document.getElementById('years').value;
+
+      const response = await fetch('/simulate_tax_scenario', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ income, expenses, investments, years })
+      });
+      const img = await response.blob();
+      const url = URL.createObjectURL(img);
+      document.getElementById('scenarioChart').innerHTML = `<img src="${url}" class="img-fluid">`;
+    });
+    document.getElementById('fetchAlerts').addEventListener('click', async () => {
+      try {
+        const response = await fetch('/tax_alerts', {
+          method: 'GET',
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const result = await response.json();
+        let html = '<h5>Upcoming Deadlines:</h5><ul>';
+        result.deadlines.forEach(deadline => {
+          html += `<li>${deadline.date}: ${deadline.description}</li>`;
+        });
+        html += '</ul>';
+        html += `<h5>Regulatory Alerts:</h5><p>${result.regulatory_alerts}</p>`;
+        document.getElementById('alertsResult').innerHTML = html;
+      } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while fetching tax alerts.');
+      }
+    });
+    document.getElementById('ecoTaxForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      console.log("Form submitted!");
+  
+      const income = document.getElementById('ecoIncome').value;
+      console.log("Income:", income);
+  
+      try {
+          const response = await fetch('/eco_tax_savings', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ income })
+          });
+          console.log("Response:", response);
+  
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+  
+          const result = await response.json();
+          console.log("Result:", result);
+  
+          if (result.error) {
+              document.getElementById('ecoTaxResult').innerHTML = `
+                  <div class="alert alert-danger" role="alert">
+                      ${result.error}
+                  </div>
+              `;
+          } else {
+              let html = '<h5>Eco-Friendly Investment Suggestions:</h5><ul>';
+              result.suggestions.forEach(item => {
+                  html += `
+                      <li>
+                          <strong>Investment ID:</strong> ${item.investment_id}<br>
+                          <strong>Project Location:</strong> ${item.project_location}<br>
+                          <strong>Tax Benefit Claimed:</strong> ${item.tax_benefit_claimed}<br>
+                          <strong>Investment Status:</strong> ${item.investment_status}<br>
+                          <strong>Investment Type:</strong> ${item.investment_type}<br>
+                          <strong>Tax Savings:</strong> ₹${item.tax_savings.toFixed(2)}
+                      </li>
+                  `;
+              });
+              html += '</ul>';
+              document.getElementById('ecoTaxResult').innerHTML = html;
+          }
+      } catch (error) {
+          console.error('Error:', error);
+          document.getElementById('ecoTaxResult').innerHTML = `
+              <div class="alert alert-danger" role="alert">
+                  An error occurred while calculating eco tax savings. Please try again.
+              </div>
+          `;
+      }
+  });
+    </script>
+    
+</body>
+</html>

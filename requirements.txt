@@ -1,0 +1,8 @@
+Flask
+groq
+pytesseract
+pdf2image
+openpyxl
+werkzeug
+matplotlib
+requests
